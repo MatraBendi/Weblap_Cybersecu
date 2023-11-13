@@ -1,33 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Insights</title>
+    <title>Kiberbiztonság kisokos</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-    <header>
-        <h1>Cybersecurity Insights</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#trends">Trends</a></li>
-            <li><a href="#tips">Safety Tips</a></li>
-            <li><a href="#news">Latest News</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
+    <div class="fejlec">
+        <header>
+            <h1>Mindent a kiberbiztonságról</h1>
+            <br>
+        </header>
+        <nav>
+            <ul>
+                <li class="active"><a href="#kiber">Kik azok a kiberbűnözők?</a></li>
+                <li><a href="#Tuzfalak">Tűzfalak</a></li>
+                <li><a href="#Virusirtok">Vírusírtók</a></li>
+                <li><a href="#arajanlat">Árajánlat</a></li>
+            </ul>
+        </nav>
+    </div>
     <main>
         <article>
-            <!-- ide a leirasok -->
+
+            <h3>A kiberbűnözés egy széleskörű tevékenység, amely az információs technológiák és az internet használatával kapcsolatos bűncselekményeket foglalja magában.</h3>
+
+            <section id="etikus-kiberbunozes">
+                <p><span>Etikus Kiberbűnözés</span></p>
+                <p>Az etikus kiberbűnözés, vagy "white hat" hackelés, magában foglalja azokat a tevékenységeket, amelyeket biztonsági   szakértők végeznek a rendszerek biztonsági réseinek felfedezése és javítása érdekében.</p>
+                <p>Ide tartoznak:</p>
+                <ul>
+                    <li><p>Biztonsági Auditálás: Rendszerek és hálózatok átvizsgálása biztonsági rések felfedezése céljából.</p></li>
+                    <li><p>Penetrációs Tesztelés: Megpróbálják "betörni" a rendszereket, hogy azonosítsák a biztonsági hiányosságokat.
+                    </p></li>
+                    <li><p>Biztonsági Tanácsadás: Javaslatok és stratégiák kidolgozása a biztonsági kockázatok csökkentése érdekében.
+                    </p> </li>
+                </ul>
+            </section>
+
+            <section id="nem-etikus-kiberbunozes">
+                <p><span>Nem Etikus Kiberbűnözés</span></p>
+                <p>A nem etikus kiberbűnözés, vagy "black hat" hackelés, azokat a tevékenységeket jelenti, amelyek jogellenesek és károkat  okozhatnak.</p>
+            
+                <p>Típusai közé tartoznak:</p>
+                <ul>
+                    <li><p>Adathalászat (Phishing): Hamis kommunikációk küldése az adatainak megszerzése érdekében.</p></li>
+
+                    <li><p>Ransomware Támadások: Szoftver, amely titkosítja az áldozat fájljait, és váltságdíjat követel a titkosítás   feloldásáért. </p></li>
+
+                    <li><p>DDoS Támadások: Szándékos túlterhelés egy weboldal vagy hálózat ellen, hogy az elérhetetlenné váljon.
+                    </p></li>
+
+                    <li><p>Identitáslopás: Személyes adatok ellopása és azok jogellenes felhasználása.</p></li>
+
+                    <li><p>Adatszivárgás: Érzékeny információk jogellenes megszerzése és közzététele.</p></li>
+
+                    <li><p>Mindkét típusú kiberbűnözés folyamatosan fejlődik, ahogy az új technológiák és módszerek megjelennek, így a  védekezési   stratégiáknak is folyamatosan alkalmazkodniuk kell az új kihívásokhoz.</p> </li>
+
+                </ul>
+            </section>
         </article>
         <aside>
             <!-- ide kepek foleg -->
+            <iframe src="https://threatmap.fortiguard.com/" width="100%" height="400" style="border:none;"></iframe>
+            <hr>
+            <div class="password-checker">
+                <h3>Ha kíváncsi arra, hogy mennyi idő lenne feltörni a jelszavát egy átlagos géppel írja be a lenti szövegdobozba.</h3>
+                <label for="password">Adja meg a jelszavát:</label>
+                <input type="password" id="password" name="password">
+                <div id="password-strength"></div>
+            </div>
+
+            <script>
+                document.getElementById('password').addEventListener('input', function(){
+                var password = this.value;
+                var strength = calculatePasswordStrength(password);
+                document.getElementById('password-strength').textContent = 'Ennyi időbe telne feltörni a jelszavad: ' + strength;});
+
+                function calculatePasswordStrength(password) {
+                var length = password.length;           //hosszt nézünk
+                var hasNumbers = /\d/.test(password);   //megnézi van-e benne szám
+                var hasSpecialChars = /[!@#$%^&*(),.?":{}|<>]/.test(password);  //specko karakter
+                var hasMixedCase = password !== password.toLowerCase() && password !== password.toUpperCase(); //megnezi, hogy van-e benne kis es nagybetu, osszehasonlitja 2féle képpen
+
+                var score = length;
+                if (hasNumbers) { score *= 2; }  //ha van benne szam akkor duplazza az eredmeny
+                if (hasSpecialChars) { score *= 3; }  //ha specko akkor tripla
+                if (hasMixedCase) { score *= 2; }    // ha kis-nagybetu akkor dupla
+
+
+                var timeToCrack = 'azonnal';
+                if (score > 10) { timeToCrack = 'pár másodperc'; }
+                if (score > 20) { timeToCrack = 'néhány perc'; }
+                if (score > 35) { timeToCrack = 'néhány óra'; }
+                if (score > 50) { timeToCrack = 'sok nap'; }
+                if (score > 70) { timeToCrack = 'nagyon sok év'; }
+
+                return timeToCrack;
+}
+            </script>
+
         </aside>
     </main>
     <footer>
-        <p>&copy; 2023 Cybersecurity Insights</p>
+        <p>&copy; 2023 Mátravölgyi Bendegúz</p>
     </footer>
+
 </body>
 </html>
+
