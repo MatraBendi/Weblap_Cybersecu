@@ -8,6 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
 
 </head>
+<script>
+    window.onload = function() {
+        document.getElementById("textbox").value = "Szeretek";
+    };
+</script>
     <body>
         <div class="fejlec">
             <header>
@@ -19,18 +24,20 @@
                     <li><a href="index.html">Kik azok a kiberbűnözők?</a></li>
                     <li><a href="#Tuzfalak">Tűzfalak</a></li>
                     <li class="active"><a href="xss.html#pelda">Mindennapi példák</a></li>
-                    <li><a href="arajanlat.html">Árajánlat</a></li>
+                    <li><a href="arajanlat.html" target="_blank">Árajánlat</a></li>
              </ul>
 
              
             </nav>
         </div>
+        <div class="main-layout">
+            <div class="left-side">
             <main>
                 <article>
                     <h1>XSS bemutatása</h1>
                     <p>Próbáld ki:</p>
                     <ul>
-                        <li> Szimpla alert: &lt;script&gt;alert('XSS')&lt;/script&gt; </li>
+                        <li> Szimp<!--3. jelszó: Fejleszteni -->la alert: &lt;script&gt;alert('XSS')&lt;/script&gt; </li>
                         <li> Nem beágyazott: &lt;b onmouseover=alert('XSS')&gt;Nyertél! Kattints ide&lt;/b&gt; </li>
                         <li> HTML Injection: &lt;img src="invalid" onerror="alert('XSS')"/&gt; </li>
                         <li> JavaScript linkre ágyazva:&lt;a href="javascript:alert('XSS')"&gt;Nyertél! Kattints ide&lt;/a&gt;  </li>
@@ -41,7 +48,7 @@
                     <input type="text" id="userInput" placeholder="Írjon be valamit">
                     <button onclick="displayUserInput()">Submit</button>
                     <div id="display"></div>
-                
+            
                     <script>
                         function displayUserInput()
                             {
@@ -50,12 +57,23 @@
                             }
                     </script>
                 </article>
-                <aside>
-
-                </aside>
+            </div>
+            <div class="right-side">
+                <h1>Játék</h1>
+                <p>Találd meg a 3db elrejtett jelszót a weboldalon</p>
+                <ol>
+                    <li>Az elsőnél ajánlom az F12 használatát(Textbox)</li>
+                    <li>A második a weblap alsó harmadában található</li>
+                    <li>A harmadik pedig egy alapos HTML kód átnézését igényel</li>
+                </ol>
+                <label>Mi lehet a jelszó?</label>
+                <input type="password" id="textbox" name="textbox">
+                <br>
+            </div>
+            </div>
             </main>
             <footer>
-
+                <p id="jelszo">2. jelszó: Weboldalt</p>
             </footer>
     </body>
 </html>
