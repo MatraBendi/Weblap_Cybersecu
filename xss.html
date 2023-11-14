@@ -10,8 +10,15 @@
 </head>
 <script>
     window.onload = function() {
-        document.getElementById("textbox").value = "Szeretek";
-    };
+            document.getElementById("textbox").value = "Szeretek";
+            var uls = document.querySelectorAll('.iframe-container ul');
+            var delay = 0;
+
+            uls.forEach(function(ul, index) {
+            ul.style.animationDelay = delay + 's';
+            delay += 0.5; // Ez növeli a késleltetést fél másodperccel minden új `ul` elemhez.
+            });
+        };
 </script>
     <body>
         <div class="fejlec">
@@ -78,7 +85,7 @@
                 <p>Ha bővebben érdekel a téma ezeken az oldalokon tudsz tanulni: </p>
                 <div class="iframe-container">
                     <ul>
-                        <li><a href="https://www.cybrary.it" target="_blank">Cyberary</a></li>
+                        <li><a href="https://www.cybrary.it" target="_blank">Cybrary</a></li>
                         <li><a href="https://www.tryhackme.com" target="_blank">TryHackMe</a></li>
                         <li><a href="https://www.hackthissite.org" target="_blank">Hack This Site</a></li>
                         <li><a href="https://www.hackaday.com" target="_blank">HACKADAY</a></li>
@@ -88,17 +95,6 @@
                         <li><a href="https://www.imdb.com/title/tt4158110/" target="_blank">Mr.Robot</a></li>
                         <li><a href="https://www.imdb.com/title/tt3774114/" target="_blank">Snowden</a></li>
                     </ul>
-                    <script>
-                        window.onload = function() {
-                        var uls = document.querySelectorAll('.iframe-container ul');
-                        var delay = 0;
-
-                        uls.forEach(function(ul, index) {
-                            ul.style.animationDelay = delay + 's';
-                            delay += 0.5; // Ez növeli a késleltetést fél másodperccel minden új `ul` elemhez.
-                        });
-                    };
-                    </script>
                 </div>
             </div>
             </div>
