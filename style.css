@@ -39,6 +39,9 @@ font-weight: bold;
 
 }
 
+#jelszo{
+    color: #f2f2f2;
+}
 header {
     padding: 10px;
     text-align: center;
@@ -126,6 +129,36 @@ footer {
     padding: 10px;
     background-color: #f2f2f2;
 }
+/* xss*/
+
+.main-layout{
+    display: flex;
+    flex-direction: row;
+}
+.main-layout .left-side, .main-layout .right-side {
+    flex: 1; /* Mindkét oldal 50%-os szélességű */
+}
+
+.main-layout {
+    flex-direction: column;
+}
+
+.side img {
+    height: auto;
+    width: 100%;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Középre igazítja a tartalmat vízszintesen */
+}
+
+#loginSection{
+text-align: center;
+
+}
 
 /* Tablet nézet */
 @media all and (min-width: 600px) {
@@ -148,6 +181,29 @@ footer {
 }
 
 /* Asztali nézet */
-@media all and (min-width: 768px) {
-    
+@media (min-width: 768px) {
+    .main-layout {
+        display: flex;
+        flex-direction: row;
+        min-height: 100vh;
+    }
+
+    .side {
+        flex: 1; /* 20% szélesség */
+        overflow: hidden;
+    }
+
+    .side img {
+        height: 100vh;
+        width: auto;
+        object-fit: cover;
+    }
+
+    .center-content {
+        flex: 3; /* 60% szélesség */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Középre igazítja a tartalmat vízszintesen */
+    }
 }
