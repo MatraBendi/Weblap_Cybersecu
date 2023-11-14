@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiberbiztonság kisokos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+    <body>
+        <div class="fejlec">
+            <header>
+                <h1>Mindent a kiberbiztonságról</h1>
+                <br>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Kik azok a kiberbűnözők?</a></li>
+                    <li><a href="#Tuzfalak">Tűzfalak</a></li>
+                    <li class="active"><a href="xss.html#pelda">Mindennapi példák</a></li>
+                    <li><a href="arajanlat.html">Árajánlat</a></li>
+             </ul>
+
+             
+            </nav>
+        </div>
+            <main>
+                <article>
+                    <h1>XSS bemutatása</h1>
+                    <p>Próbáld ki:</p>
+                    <ul>
+                        <li> Szimpla alert: &lt;script&gt;alert('XSS')&lt;/script&gt; </li>
+                        <li> Nem beágyazott: &lt;b onmouseover=alert('XSS')&gt;Nyertél! Kattints ide&lt;/b&gt; </li>
+                        <li> HTML Injection: &lt;img src="invalid" onerror="alert('XSS')"/&gt; </li>
+                        <li> JavaScript linkre ágyazva:&lt;a href="javascript:alert('XSS')"&gt;Nyertél! Kattints ide&lt;/a&gt;  </li>
+                        <li> Ha az első nem működik:<br>cd "C:\Program Files (x86)\Google\Chrome\Application" <br>
+                             chrome.exe --disable-xss-auditor</li>
+                    </ul>
+
+                    <input type="text" id="userInput" placeholder="Írjon be valamit">
+                    <button onclick="displayUserInput()">Submit</button>
+                    <div id="display"></div>
+                
+                    <script>
+                        function displayUserInput()
+                            {
+                            var input = document.getElementById('userInput').value;
+                            document.getElementById('display').innerHTML = input;
+                            }
+                    </script>
+                </article>
+                <aside>
+
+                </aside>
+            </main>
+            <footer>
+
+            </footer>
+    </body>
+</html>
+
