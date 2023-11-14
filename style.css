@@ -102,6 +102,9 @@ nav ul li:focus-within {
 nav ul li.active {
     background-color: #4CAF50; 
 }
+#secretContent { 
+    display: none; 
+}
 
 main {
     display: flex;
@@ -159,6 +162,25 @@ footer {
 text-align: center;
 
 }
+
+@keyframes horizontalSlide {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+.iframe-container ul {
+    animation: horizontalSlide 2s ease-in-out infinite;
+
+}
+
+.iframe-container ul li {
+    margin-bottom: 10px; /* vagy bármilyen más érték, ami megfelel az igényeinek */
+}
+
 
 /* Tablet nézet */
 @media all and (min-width: 600px) {
