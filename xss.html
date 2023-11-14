@@ -37,10 +37,16 @@
                     <h1>XSS bemutatása</h1>
                     <p>Próbáld ki:</p>
                     <ul>
-                        <li> Szimp<!--3. jelszó: Fejleszteni -->la alert: &lt;script&gt;alert('XSS')&lt;/script&gt; </li>
-                        <li> Nem beágyazott: &lt;b onmouseover=alert('XSS')&gt;Nyertél! Kattints ide&lt;/b&gt; </li>
-                        <li> HTML Injection: &lt;img src="invalid" onerror="alert('XSS')"/&gt; </li>
-                        <li> JavaScript linkre ágyazva:&lt;a href="javascript:alert('XSS')"&gt;Nyertél! Kattints ide&lt;/a&gt;  </li>
+                        <li> Szimp<!--3. jelszó: Fejleszteni -->la alert:<br> &lt;script&gt;alert('XSS')&lt;/script&gt; </li>
+                        <br>
+
+                        <li> Nem beágyazott:<br> &lt;b onmouseover=alert('XSS')&gt;Nyertél! Kattints ide&lt;/b&gt; </li>
+                        <br>
+
+                        <li> HTML Injection:<br> &lt;img src="invalid" onerror="alert('XSS')"/&gt;</li>
+                        <br>
+                        <li> JavaScript linkre ágyazva:&lt;a href="javascript:alert('XSS')"&gt;Nyertél! Kattints ide&lt;/a&gt;  </li> <br>
+
                         <li> Ha az első nem működik:<br>cd "C:\Program Files (x86)\Google\Chrome\Application" <br>
                              chrome.exe --disable-xss-auditor</li>
                     </ul>
@@ -69,6 +75,31 @@
                 <label>Mi lehet a jelszó?</label>
                 <input type="password" id="textbox" name="textbox">
                 <br>
+                <p>Ha bővebben érdekel a téma ezeken az oldalokon tudsz tanulni: </p>
+                <div class="iframe-container">
+                    <ul>
+                        <li><a href="https://www.cybrary.it" target="_blank">Cyberary</a></li>
+                        <li><a href="https://www.tryhackme.com" target="_blank">TryHackMe</a></li>
+                        <li><a href="https://www.hackthissite.org" target="_blank">Hack This Site</a></li>
+                        <li><a href="https://www.hackaday.com" target="_blank">HACKADAY</a></li>
+                    </ul>
+                <p>Ha pedig filmek és sorozatok érdekelnek ezeket tudom ajánlani:</p>
+                    <ul>
+                        <li><a href="https://www.imdb.com/title/tt4158110/" target="_blank">Mr.Robot</a></li>
+                        <li><a href="https://www.imdb.com/title/tt3774114/" target="_blank">Snowden</a></li>
+                    </ul>
+                    <script>
+                        window.onload = function() {
+                        var uls = document.querySelectorAll('.iframe-container ul');
+                        var delay = 0;
+
+                        uls.forEach(function(ul, index) {
+                            ul.style.animationDelay = delay + 's';
+                            delay += 0.5; // Ez növeli a késleltetést fél másodperccel minden új `ul` elemhez.
+                        });
+                    };
+                    </script>
+                </div>
             </div>
             </div>
             </main>
