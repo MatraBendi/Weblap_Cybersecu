@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiberbiztonság kisokos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+    <body>
+        <div class="fejlec">
+            <header>
+                <h1>Mindent a kiberbiztonságról</h1>
+                <br>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Kik azok a kiberbűnözők?</a></li>
+                    <li><a href="#Tuzfalak">Tűzfalak</a></li>
+                    <li ><a href="xss.html#pelda">Mindennapi példák</a></li>
+                    <li class="active"><a href="arajanlat.html">Árajánlat</a></li>
+             </ul>
+
+             
+            </nav>
+        </div>
+            <main>
+                <article>
+                    <form method="post" action="http://szamtud.uni-corvinus.hu/receive.php">
+                        <div>
+                            <label>Vezetéknév:</label>
+                            <input type="text" id="textbox" name="textbox" placeholder="Gipsz">
+                            <br>
+                            <label>Keresztnév:</label>
+                            <input type="text" id="textbox" name="textbox" placeholder="Jakab">
+                            <br>
+                            <label for="region">Megye:</label>
+                                <select id="region" name="region" onchange="updateForm()">
+                                    <option value="Budapest">Pest</option>
+                                    <option value="Other">Egyéb</option>
+                                </select>
+                            <label for="districts">Válasszon egy területet:</label>
+                            <select id="districts" name="districts">
+                                <option value="Budapest">Budapest</option>
+                                <option value="II. kerület">II. kerület</option>
+                                <option value="III. kerület">III. kerület</option>
+                                <option value="IV. kerület">IV. kerület</option>
+                                <option value="V. kerület">V. kerület</option>
+                                <option value="VI. kerület">VI. kerület</option>
+                                <option value="VII. kerület">VII. kerület</option>
+                                <option value="VIII. kerület">VIII. kerület</option>
+                                <option value="IX. kerület">IX. kerület</option>
+                                <option value="X. kerület">X. kerület</option>
+                                <option value="XI. kerület">XI. kerület</option>
+                                <option value="XII. kerület">XII. kerület</option>
+                                <option value="XIII. kerület">XIII. kerület</option>
+                                <option value="XIV. kerület">XIV. kerület</option>
+                                <option value="XV. kerület">XV. kerület</option>
+                                <option value="XVI. kerület">XVI. kerület</option>
+                                <option value="XVII. kerület">XVII. kerület</option>
+                                <option value="XVIII. kerület">XVIII. kerület</option>
+                                <option value="XIX. kerület">XIX. kerület</option>
+                                <option value="XX. kerület">XX. kerület</option>
+                                <option value="XXI. kerület">XXI. kerület</option>
+                                <option value="XXII. kerület">XXII. kerület</option>
+                                <option value="XXIII. kerület">XXIII. kerület</option>
+                            </select>
+                            <input type="text" id="county" name="county" placeholder="Írja be a megyét" style="display:none;">
+                        </div>
+
+                        <script>
+                            function updateForm() {
+                                var regionSelect = document.getElementById('region');
+                                var selectedRegion = regionSelect.options[regionSelect.selectedIndex].value;
+                                var districtSelect = document.getElementById('districts');
+                                var countyInput = document.getElementById('county');
+                    
+                                if (selectedRegion === 'Budapest') {
+                                    districtSelect.style.display = 'block';
+                                    countyInput.style.display = 'none';
+                                } else if (selectedRegion === 'Other') {
+                                    districtSelect.style.display = 'none';
+                                    countyInput.style.display = 'block';
+                                } else {
+                                    districtSelect.style.display = 'none';
+                                    countyInput.style.display = 'none';
+                                }
+                            }
+                        </script>
+
+                        <div>
+                            <label>Radio Buttons:</label>
+                            <input type="radio" id="radio1" name="radio" value="Option 1">
+                            <label for="radio1">Option 1</label>
+                            <input type="radio" id="radio2" name="radio" value="Option 2">
+                            <label for="radio2">Option 2</label>
+                        </div>
+                        <div>
+                            <label>Checkboxes:</label>
+                            <input type="checkbox" id="checkbox1" name="checkbox" value="Checkbox 1">
+                            <label for="checkbox1">Checkbox 1</label>
+                            <input type="checkbox" id="checkbox2" name="checkbox" value="Checkbox 2">
+                            <label for="checkbox2">Checkbox 2</label>
+                        </div>
+                        <div>
+                            <label>Date:</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+                        <div>
+                            <label>Color:</label>
+                            <input type="color" id="color" name="color">
+                        </div>
+                        <div>
+                            <label>Range (Csuszka):</label>
+                            <input type="range" id="range" name="range" min="0" max="100">
+                        </div>
+                        <div>
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </article>
+            </main>
+            <footer>
+
+            </footer>
+    </body>
+</html>
+
