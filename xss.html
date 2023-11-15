@@ -5,20 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiberbiztonság kisokos</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 <script>
     window.onload = function() {
             document.getElementById("textbox").value = "Szeretek";
-            var uls = document.querySelectorAll('.iframe-container ul');
-            var delay = 0;
-
-            uls.forEach(function(ul, index) {
-            ul.style.animationDelay = delay + 's';
-            delay += 0.5; // Ez növeli a késleltetést fél másodperccel minden új `ul` elemhez.
-            });
-        };
+    }
 </script>
     <body>
         <div class="fejlec">
@@ -83,7 +76,7 @@
                 <input type="password" id="textbox" name="textbox">
                 <br>
                 <p>Ha bővebben érdekel a téma ezeken az oldalokon tudsz tanulni: </p>
-                <div class="iframe-container">
+                <div>
                     <ul>
                         <li><a href="https://www.cybrary.it" target="_blank">Cybrary</a></li>
                         <li><a href="https://www.tryhackme.com" target="_blank">TryHackMe</a></li>
