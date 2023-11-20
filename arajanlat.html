@@ -50,43 +50,17 @@
                             <label>Keresztnév:</label>
                             <input type="text" id="textbox" name="textbox" placeholder="Jakab">
                             <br>
-                            <label for="region">Megye:</label>
-                                <select id="region" name="region" onchange="updateForm()">
-                                    <option value="Pest">Pest</option>
-                                    <option value="Other">Egyéb</option>
+                            <label for="region">Válassza ki a terméket:</label>
+                                <select id="region" name="region">
+                                    <option value="100F">FortiGate 100F</option>
+                                    <option value="WAF">FortiWeb 100F</option>
+                                    <option value="Manager">FortiManager-VM-10-UG</option>
+                                    <option value="Analzer">FortiAnalyzer-VM-GB-1</option>
+                                    <option value="Mail">FortiMail 200F</option>
                                 </select>
-                                <br>
-                            <label for="districts">Válasszon egy területet:</label>
-                            <select id="districts" name="districts" style="display:block;">
-                                <option value="Budaors">Budapest</option>
-                                <option value="Budaors">Budaörs</option>
-                                <option value="Cegled">Cegléd</option>
-                                <option value="Dunakeszi">Dunakeszi</option>
-                                <option value="Erd">Érd</option>
-                                <option value="Godollo">Gödöllő</option>
-                            </select>
-                            <input type="text" id="county" name="county" placeholder="Írja be a megyét" style="display:none;">
                         </div>
-
-                        <script>
-                            function updateForm() {
-                                var regionSelect = document.getElementById('region');
-                                var selectedRegion = regionSelect.options[regionSelect.selectedIndex].value;
-                                var districtSelect = document.getElementById('districts');
-                                var countyInput = document.getElementById('county');
-
-                                if (selectedRegion === 'Pest') {
-                                    districtSelect.style.display = 'block'; // Megjelenítjük a területek legördülő listáját
-                                    countyInput.style.display = 'none'; // Elrejtjük a megye szövegbevitelit
-                                } else if (selectedRegion === 'Other') {
-                                    districtSelect.style.display = 'none'; // Elrejtjük a területek legördülő listáját
-                                    countyInput.style.display = 'block'; // Megjelenítjük a megye szövegbevitelit
-                                }
-                            }
-                        </script>
-
                         <div>
-                            <label>Radio Buttons:</label>
+                            <label>V:</label>
                             <input type="radio" id="radio1" name="radio" value="Option 1">
                             <label for="radio1">Option 1</label>
                             <input type="radio" id="radio2" name="radio" value="Option 2">
