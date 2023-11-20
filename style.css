@@ -161,26 +161,16 @@ footer {
 
 #loginSection{
 text-align: center;
-
 }
 
-@keyframes horizontalSlide {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(20px);
-    }
+.dt-image {
+    width: 50%; /* Adjust the percentage as needed for the desired size */
+    height: auto; /* This maintains the aspect ratio of the image */
+    display: block;
+    margin: auto; /* This centers the image in the div */
 }
 
-.iframe-container ul {
-    animation: horizontalSlide 2s ease-in-out infinite;
 
-}
-
-.iframe-container ul li {
-    margin-bottom: 10px; /* vagy bármilyen más érték, ami megfelel az igényeinek */
-}
 
 
 /* Tablet nézet */
@@ -201,6 +191,11 @@ text-align: center;
     aside {
         flex: 30%;
     }
+    .dt-image {
+        width: 50%; /* Smaller size for larger screens */
+    }
+
+    
 }
 
 /* Asztali nézet */
@@ -221,7 +216,6 @@ text-align: center;
         width: auto;
         object-fit: cover;
     }
-
     .center-content {
         flex: 3; /* 60% szélesség */
         display: flex;
