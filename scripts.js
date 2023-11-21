@@ -15,7 +15,8 @@ document.getElementById('password').addEventListener('input', function()
     var password = this.value;
     var strength = calculatePasswordStrength(password);
     document.getElementById('password-strength').textContent = 'Ennyi időbe telne feltörni a jelszavad: ' + strength;
-});
+}
+);
 
 function calculatePasswordStrength(password) {
     var length = password.length;
@@ -33,7 +34,7 @@ function calculatePasswordStrength(password) {
     {
         timeToCrack = 'pár másodperc';
     }
-    
+
     if (score > 20)
     { 
         timeToCrack = 'néhány perc';
