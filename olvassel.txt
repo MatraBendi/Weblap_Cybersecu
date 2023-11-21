@@ -14,3 +14,15 @@ JS:
 4)arajanlat: Ez a kód lehetővé teszi, hogy a felhasználó egy jelszót adjon meg, amit a rendszer ellenőriz. Ha a jelszó helyes, a felhasználó hozzáfér egy elrejtett tartalomhoz, ha helytelen, egy figyelmeztető(alert) üzenetet kap.
 
 Font: https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap", h1-nél Roboto, ami a "Mindent a kiberbiztonságról" a body-ban lévő szövegek pedig Open Sans
+
+
+
+Forrás:
+FortiGate 6500F - https://shorturl.at/jmvz9
+FortiGate 3000F -  https://t.ly/e1gC8
+FortiGate 100F - https://t.ly/SLqPR
+FortiGate 60F - https://t.ly/JzEfh
+FavIcon - https://t.ly/soIDV
+DT - https://t.ly/sIi1Y
+Binary Gif - https://tinyurl.com/5n6tdfwn
+Binary Wall - https://tinyurl.com/musjtrzs
