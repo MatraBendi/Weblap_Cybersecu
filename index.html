@@ -6,7 +6,7 @@
     <title>Kiberbiztonság kisokos</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-
+    
 
 </head>
 <body>
@@ -19,7 +19,7 @@
             <ul>
                 <li class="active"><a href="index.html#kiber">Kik azok a kiberbűnözők?</a></li>
                 <li><a href="#Tuzfalak">Tűzfalak</a></li>
-                <li><a href="xss.html#pelda">Mindennapi példák</a></li>
+                <li><a href="xss.html">Mindennapi példák</a></li>
                 <li><a href="arajanlat.html" target="_blank">Árajánlat</a></li>
             </ul>
         </nav>
@@ -76,36 +76,9 @@
             <img src="kepek/DT.png" class="dt-image"></a> 
             </div>
 
-            <script>
-                document.getElementById('password').addEventListener('input', function(){
-                var password = this.value;
-                var strength = calculatePasswordStrength(password);
-                document.getElementById('password-strength').textContent = 'Ennyi időbe telne feltörni a jelszavad: ' + strength;});
-
-                function calculatePasswordStrength(password) {
-                var length = password.length;           //hosszt nézünk
-                var hasNumbers = /\d/.test(password);   //megnézi van-e benne szám
-                var hasSpecialChars = /[!@#$%^&*(),.?":{}|<>]/.test(password);  //specko karakter
-                var hasMixedCase = password !== password.toLowerCase() && password !== password.toUpperCase(); //megnezi, hogy van-e benne kis es nagybetu, osszehasonlitja 2féle képpen
-
-                var score = length;
-                if (hasNumbers) { score *= 2; }  //ha van benne szam akkor duplazza az eredmeny
-                if (hasSpecialChars) { score *= 3; }  //ha specko akkor tripla
-                if (hasMixedCase) { score *= 2; }    // ha kis-nagybetu akkor dupla
-
-
-                var timeToCrack = 'azonnal';
-                if (score > 10) { timeToCrack = 'pár másodperc'; }
-                if (score > 20) { timeToCrack = 'néhány perc'; }
-                if (score > 35) { timeToCrack = 'néhány óra'; }
-                if (score > 50) { timeToCrack = 'sok nap'; }
-                if (score > 70) { timeToCrack = 'nagyon sok év'; }
-
-                return timeToCrack;
-                }
-            </script>
-
+            
         </aside>
+        <script src="scripts.js"></script>
     </main>
     <footer>
         <p>&copy; 2023 Mátravölgyi Bendegúz</p>
