@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mátravölgyi Bendegúz">
+    <meta name="copyright" content="csak oktatási célokra">
+    <meta name="desription" content="Árajánlat kérése">
     <title>Kiberbiztonság kisokos</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
@@ -32,7 +35,6 @@
                     <li ><a href="xss.html">Mindennapi példák</a></li>
                     <li class="active"><a href="arajanlat.html">Árajánlat</a></li>
              </ul>
-
              
             </nav>
         </div>
@@ -43,7 +45,7 @@
             </div>
             <div class="center-content">
             <main>
-                <article>
+                <article class="arajanlat-kozep">
                     <form id="validalas" method="post" action="http://szamtud.uni-corvinus.hu/receive.php">
                         <div>
                             <label>Vezetéknév:</label>
@@ -52,6 +54,7 @@
                             <input type="text" id="keresztnev" name="textbox" placeholder="Jakab">
                             <hr>
                             <label for="region">Válassza ki a terméket:</label>
+                            <br>
                                 <select id="region" name="region">
                                     <option value="100F">FortiGate 100F</option>
                                     <option value="WAF">FortiWeb 100F</option>
@@ -59,7 +62,9 @@
                                     <option value="Analzer">FortiAnalyzer-VM-GB-1</option>
                                     <option value="Mail">FortiMail 200F</option>
                                 </select>
+
                         </div>
+                        <br>
                         <div>
                             <label>Adja meg a támogatottság szintjét:</label>
                             <br>
@@ -69,7 +74,9 @@
                             <label for="radio2">Advanced</label>
                             <input type="radio" id="radio3" name="radio" value="Option 3">
                             <label for="radio3">Expert</label>
+
                         </div>
+                        <br>
                         <div>
                             <label>Extra igények:</label>
                             <br>
@@ -79,21 +86,26 @@
                             <label for="checkbox2">Implementáció </label>
                             <input type="checkbox" id="checkbox3" name="checkbox" value="Checkbox 3">
                             <label for="checkbox3">7x24-es készenlét </label>
+
                         </div>
+                        <br>
                         <div>
-                            <label>Date:</label>
+                            <label>Adja meg az időpontot a szállításra:</label>
                             <input type="date" id="date" name="date">
                         </div>
+                        <br>
                         <div>
-                            <label>Color:</label>
+                            <label>Válassza ki az eszköz színét</label>
                             <input type="color" id="color" name="color">
                         </div>
+                        <br>
                         <div>
-                            <label>Range (Csuszka):</label>
+                            <label>Adja meg a darabszámot:</label>
                             <input type="range" id="range" name="range" min="0" max="10">
                         </div>
+                        <br>
                         <div>
-                            <input type="submit" value="Submit">
+                            <input type="submit" value="Rendelés leadása">
                         </div>
                     </form>
                 </article>
