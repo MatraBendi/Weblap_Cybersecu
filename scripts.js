@@ -29,11 +29,30 @@ function calculatePasswordStrength(password) {
     if (hasMixedCase) { score *= 2; }
 
     var timeToCrack = 'azonnal';
-    if (score > 10) { timeToCrack = 'pár másodperc'; }
-    if (score > 20) { timeToCrack = 'néhány perc'; }
-    if (score > 35) { timeToCrack = 'néhány óra'; }
-    if (score > 50) { timeToCrack = 'sok nap'; }
-    if (score > 70) { timeToCrack = 'nagyon sok év'; }
+    if (score > 10)
+    {
+        timeToCrack = 'pár másodperc';
+    }
+    
+    if (score > 20)
+    { 
+        timeToCrack = 'néhány perc';
+    }
+
+    if (score > 35)
+    { 
+        timeToCrack = 'néhány óra';
+    }
+
+    if (score > 50)
+    {
+        timeToCrack = 'sok nap';
+    }
+
+    if (score > 70)
+    {
+        timeToCrack = 'nagyon sok év';
+    }
 
     return timeToCrack;
 }
