@@ -191,6 +191,35 @@ text-align: center;
 
 }
 
+label#vezeteknev-error.error{
+    display: block;
+    flex-wrap: wrap ;
+}
+
+label#keresztnev-error.error{
+    display: block;
+    flex-wrap: wrap ;
+}
+
+label#csomag-error.error{
+    display: block;
+    flex-wrap: wrap ;
+}
+
+.galleria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin: auto;
+}
+
+.galleria img{
+    max-width: 100%;
+    height: auto;
+
+}
+
 /* Tablet nézet */
 @media all and (min-width: 600px) {
     nav ul {
