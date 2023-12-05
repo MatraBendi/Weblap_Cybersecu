@@ -190,21 +190,13 @@ text-align: center;
     text-align: center;
 
 }
-
-label#vezeteknev-error.error{
+label.error{
+    color: red;
     display: block;
     flex-wrap: wrap ;
 }
 
-label#keresztnev-error.error{
-    display: block;
-    flex-wrap: wrap ;
-}
 
-label#csomag-error.error{
-    display: block;
-    flex-wrap: wrap ;
-}
 
 .galleria{
     display: flex;
@@ -247,7 +239,7 @@ label#csomag-error.error{
         flex: 30%;
     }
     .dt-image {
-        width: 50%; /* Smaller size for larger screens */
+        width: 50%; 
     }
     .content-container {
         flex-direction: row;
