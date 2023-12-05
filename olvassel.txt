@@ -6,16 +6,16 @@ Weboldal: https://matrabendi.github.io/Weblap_Cybersecu/
 
 Github: https://github.com/MatraBendi/Weblap_Cybersecu
 
-Leírás: Az oldal egy rövid leírást ad a kiberbiztonságról, milyen két csoportba lehet osztani a hackereket. Ezen felül bemutatja a fontosságát a tűzfalaknak és mindennapi példákkal szemlélteti, az xss támadási formát és egy rövid játékkal teszteli a hallgatók tudását, ezen felül egy .
+Leírás: Az oldal egy rövid leírást ad a kiberbiztonságról, milyen két csoportba lehet osztani a hackereket. Ezen felül bemutatja a fontosságát a tűzfalaknak és mindennapi példákkal szemlélteti, az xss támadási formát és egy rövid játékkal teszteli a hallgatók tudását, ezen felül egy rendelés oldallal rendelkezik.
 
 JS:
-1)index: egy adott karakterláncot megvizsgál és értéket párosít hozzá, ez alapján számolja ki mennyi idő lenne feltörni a kódot.
+1)index: egy adott karakterláncot megvizsgál és értéket párosít hozzá, ez alapján számolja ki mennyi idő lenne feltörni a kódot, ha talál egyezést kiírja.
 
 3)xss: onLoad paraméternél, autómatikusan kivan töltve a textbox. Másik kód lehetővé teszi, hogy a felhasználó szöveget írjon be egy mezőbe, és egy gomb megnyomásával megjelenítse azt a szöveget egy másik helyen az oldalon, xss bemutatása.
 
-4)arajanlat: Ez a kód lehetővé teszi, hogy a felhasználó egy jelszót adjon meg, amit a rendszer ellenőriz. Ha a jelszó helyes, a felhasználó hozzáfér egy elrejtett tartalomhoz, ha helytelen, egy figyelmeztető(alert) üzenetet kap.
+4)arajanlat: Ez a kód lehetővé teszi, hogy a felhasználó egy jelszót adjon meg, amit a rendszer ellenőriz. Ha a jelszó helyes, a felhasználó hozzáfér egy elrejtett tartalomhoz, ha helytelen, egy figyelmeztető(alert) üzenetet kap, 4helytelen próbálkozás után bezárja az ablakot.
 
-Font: https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap", h1-nél Roboto, ami a "Mindent a kiberbiztonságról" a body-ban lévő szövegek pedig Open Sans
+Font: https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap", h1-nél Roboto, ami a "Mindent a kiberbiztonságról" a body-ban lévő szövegek pedig Open Sans.
 
 
 
