@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Mátravölgyi Bendegúz">
     <meta name="copyright" content="csak oktatási célokra">
-    <meta name="desription" content="XSS bemutatása">
+    <meta name="description" content="XSS bemutatása">
     <title>Kiberbiztonság kisokos</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="kepek/cyber-attack.png" type="image/x-icon">
 
-    
-</head>
-    <body>
-        <div class="fejlec">
-            <header>
-                <h1>Mindent a kiberbiztonságról</h1>
-                <br>
-            </header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Kik azok a kiberbűnözők?</a></li>
-                    <li><a href="tuzfal.html">Tűzfalak</a></li>
-                    <li class="active"><a href="xss.html">Mindennapi példák</a></li>
-                    <li><a href="arajanlat.html" target="_blank">Árajánlat</a></li>
-             </ul>
 
-             
-            </nav>
-        </div>
-        <div class="main-layout">
-            <div class="left-side">
+</head>
+
+<body>
+    <div class="fejlec">
+        <header>
+            <h1>Mindent a kiberbiztonságról</h1>
+            <br>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kik azok a kiberbűnözők?</a></li>
+                <li><a href="tuzfal.html">Tűzfalak</a></li>
+                <li class="active"><a href="xss.html">Mindennapi példák</a></li>
+                <li><a href="arajanlat.html" target="_blank">Árajánlat</a></li>
+            </ul>
+
+
+        </nav>
+    </div>
+    <div class="main-layout">
+        <div class="left-side">
             <main>
                 <article>
                     <h1>XSS bemutatása</h1>
                     <p>Próbáld ki:</p>
                     <ul>
-                        <li> Szimp<!--3. jelszó: Fejleszteni -->la alert:<br> &lt;script&gt;alert('XSS')&lt;/script&gt; </li>
+                        <li> Szimp<!--3. jelszó: Fejleszteni -->la alert:<br> &lt;script&gt;alert('XSS')&lt;/script&gt;
+                        </li>
                         <br>
 
                         <li> Nem beágyazott:<br> &lt;b onmouseover=alert('XSS')&gt;Nyertél! Kattints ide&lt;/b&gt; </li>
@@ -45,49 +50,50 @@
 
                         <li> HTML Injection:<br> &lt;img src="invalid" onerror="alert('XSS')"/&gt;</li>
                         <br>
-                        <li> JavaScript linkre ágyazva:&lt;a href="javascript:alert('XSS')"&gt;Nyertél! Kattints ide&lt;/a&gt;  </li> <br>
+                        <li> JavaScript linkre ágyazva:&lt;a href="javascript:alert('XSS')"&gt;Nyertél! Kattints
+                            ide&lt;/a&gt; </li> <br>
 
                         <li> Ha az első nem működik:<br>cd "C:\Program Files (x86)\Google\Chrome\Application" <br>
-                             chrome.exe --disable-xss-auditor</li>
+                            chrome.exe --disable-xss-auditor</li>
                     </ul>
 
                     <input type="text" id="userInput" placeholder="Írjon be valamit">
                     <button onclick="displayUserInput()">Submit</button>
                     <div id="display"></div>
                 </article>
-            </div>
-            <div class="right-side">
-                <h1>Játék</h1>
-                <p>Találd meg a 3db elrejtett jelszót a weboldalon</p>
-                <ol>
-                    <li>Az elsőnél ajánlom az F12 használatát(Textbox)</li>
-                    <li>A második a weblap alsó harmadában található</li>
-                    <li>A harmadik pedig egy alapos HTML kód átnézését igényel</li>
-                </ol>
-                <label>Mi lehet a jelszó?</label>
-                <input type="password" id="textbox" name="textbox">
-                <br>
-                <p>Ha bővebben érdekel a téma ezeken az oldalokon tudsz tanulni: </p>
-                <div>
-                    <ul>
-                        <li><a href="https://www.cybrary.it" target="_blank">Cybrary</a></li>
-                        <li><a href="https://www.tryhackme.com" target="_blank">TryHackMe</a></li>
-                        <li><a href="https://www.hackthissite.org" target="_blank">Hack This Site</a></li>
-                        <li><a href="https://www.hackaday.com" target="_blank">HACKADAY</a></li>
-                    </ul>
+        </div>
+        <div class="right-side">
+            <h1>Játék</h1>
+            <p>Találd meg a 3db elrejtett jelszót a weboldalon</p>
+            <ol>
+                <li>Az elsőnél ajánlom az F12 használatát(Textbox)</li>
+                <li>A második a weblap alsó harmadában található</li>
+                <li>A harmadik pedig egy alapos HTML kód átnézését igényel</li>
+            </ol>
+            <label>Mi lehet a jelszó?</label>
+            <input type="password" id="textbox" name="textbox">
+            <br>
+            <p>Ha bővebben érdekel a téma ezeken az oldalokon tudsz tanulni: </p>
+            <div>
+                <ul>
+                    <li><a href="https://www.cybrary.it" target="_blank">Cybrary</a></li>
+                    <li><a href="https://www.tryhackme.com" target="_blank">TryHackMe</a></li>
+                    <li><a href="https://www.hackthissite.org" target="_blank">Hack This Site</a></li>
+                    <li><a href="https://www.hackaday.com" target="_blank">HACKADAY</a></li>
+                </ul>
                 <p>Ha pedig filmek és sorozatok érdekelnek ezeket tudom ajánlani:</p>
-                    <ul>
-                        <li><a href="https://www.imdb.com/title/tt4158110/" target="_blank">Mr.Robot</a></li>
-                        <li><a href="https://www.imdb.com/title/tt3774114/" target="_blank">Snowden</a></li>
-                    </ul>
-                </div>
+                <ul>
+                    <li><a href="https://www.imdb.com/title/tt4158110/" target="_blank">Mr.Robot</a></li>
+                    <li><a href="https://www.imdb.com/title/tt3774114/" target="_blank">Snowden</a></li>
+                </ul>
             </div>
-            </div>
-            </main>
-            <footer>
-                <p id="jelszo">2. jelszó: Weboldalt</p>
-            </footer>
-            <script src="scripts.js"></script>
-    </body>
-</html>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <p id="jelszo">2. jelszó: Weboldalt</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
 
+</html>
