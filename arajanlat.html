@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Mátravölgyi Bendegúz">
     <meta name="copyright" content="csak oktatási célokra">
-    <meta name="desription" content="Árajánlat kérése">
+    <meta name="description" content="Árajánlat kérése">
     <title>Kiberbiztonság kisokos</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="kepek/cyber-attack.png" type="image/x-icon">
 
 </head>
-    <body>
-        
-        <div id="loginSection">
-            <h1>Árajánlat kérése</h1>
-            <p>Ez a tartalom csak a helyes jelszó beírása után jelenik meg.</p>
-            <p>Formátum: Jelszo1+Jelszo2+Jelszo3 egymás után fontos a kis-nagybetű és ékezet is!</p>
-            <label for="passwordBox">Jelszó: </label>
-            <input type="password" id="passwordBox">
-            <button onclick="checkPassword()">Belépés</button>
-        </div>
-        <div id="secretContent">
+
+<body>
+
+    <div id="loginSection">
+        <h1>Árajánlat kérése</h1>
+        <p>Ez a tartalom csak a helyes jelszó beírása után jelenik meg.</p>
+        <p>Formátum: Jelszo1Jelszo2Jelszo3 egymás után fontos a kis-nagybetű és ékezet is!</p>
+        <label for="passwordBox">Jelszó: </label>
+        <input type="password" id="passwordBox">
+        <button onclick="checkPassword()">Belépés</button>
+    </div>
+
+    <div id="secretContent">
         <div class="fejlec">
             <header>
                 <h1>Mindent a kiberbiztonságról</h1>
@@ -32,29 +37,30 @@
                 <ul>
                     <li><a href="index.html">Kik azok a kiberbűnözők?</a></li>
                     <li><a href="tuzfal.html">Tűzfalak</a></li>
-                    <li ><a href="xss.html">Mindennapi példák</a></li>
+                    <li><a href="xss.html">Mindennapi példák</a></li>
                     <li class="active"><a href="arajanlat.html">Árajánlat</a></li>
-             </ul>
-             
+                </ul>
+
             </nav>
         </div>
-        
+
         <div class="main-layout">
             <div class="side left-side">
                 <img src="kepek/36030.gif">
             </div>
             <div class="center-content">
-            <main>
-                <article class="arajanlat-kozep">
-                    <form id="validalas" method="post" action="http://szamtud.uni-corvinus.hu/receive.php">
-                        <div>
-                            <label>Vezetéknév:</label>
-                            <input type="text" id="vezeteknev" name="Vezteknev" placeholder="Gipsz">
-                            <label>Keresztnév:</label>
-                            <input type="text" id="keresztnev" name="Keresztnev" placeholder="Jakab">
-                            <hr>
-                            <label for="termek">Válassza ki a terméket:</label>
-                            <br>
+                <main>
+                    <article class="arajanlat-kozep">
+                        <form id="validalas" method="post" action="http://szamtud.uni-corvinus.hu/receive.php"
+                            novalidate>
+                            <div>
+                                <label for="Vezteknev">Vezetéknév:</label>
+                                <input type="text" id="vezeteknev" name="Vezteknev" placeholder="Gipsz">
+                                <label for="Keresztnev">Keresztnév:</label>
+                                <input type="text" id="keresztnev" name="Keresztnev" placeholder="Jakab">
+                                <hr>
+                                <label for="termek">Válassza ki a terméket:</label>
+                                <br>
                                 <select id="termek" name="Termék">
                                     <option value="100F">FortiGate 100F</option>
                                     <option value="WAF">FortiWeb 100F</option>
@@ -63,65 +69,109 @@
                                     <option value="Mail">FortiMail 200F</option>
                                 </select>
 
-                        </div>
-                        <br>
-                        <div>
-                            <label>Adja meg a támogatottság szintjét:</label>
+                            </div>
                             <br>
-                            <input type="radio" id="radio1" name="csomag" value="Basic">
-                            <label for="radio1">Basic</label>
-                            <input type="radio" id="radio2" name="csomag" value="Advanced">
-                            <label for="radio2">Advanced</label>
-                            <input type="radio" id="radio3" name="csomag" value="Expert">
-                            <label for="radio3">Expert</label>
+                            <div>
+                                <label for="csomag">Adja meg a támogatottság szintjét:</label>
+                                <br>
+                                <input type="radio" id="radio1" name="csomag" value="Basic">
+                                <label for="radio1">Basic</label>
+                                <input type="radio" id="radio2" name="csomag" value="Advanced">
+                                <label for="radio2">Advanced</label>
+                                <input type="radio" id="radio3" name="csomag" value="Expert">
+                                <label for="radio3">Expert</label>
 
-                        </div>
-                        <br>
-                        <div>
-                            <label>Extra igények:</label>
+                            </div>
                             <br>
-                            <input type="checkbox" id="checkbox1" name="oktatas" value="oktatas">
-                            <label for="checkbox1">Oktatás</label>
-                            <input type="checkbox" id="checkbox2" name="implementaio" value="implementaio">
-                            <label for="checkbox2">Implementáció </label>
-                            <input type="checkbox" id="checkbox3" name="7x24" value="7x24">
-                            <label for="checkbox3">7x24-es készenlét </label>
+                            <div>
+                                <label>Extra igények:</label>
+                                <br>
+                                <input type="checkbox" id="checkbox1" name="oktatas" value="oktatas">
+                                <label for="checkbox1">Oktatás</label>
+                                <input type="checkbox" id="checkbox2" name="implementaio" value="implementaio">
+                                <label for="checkbox2">Implementáció </label>
+                                <input type="checkbox" id="checkbox3" name="7x24" value="7x24">
+                                <label for="checkbox3">7x24-es készenlét </label>
 
-                        </div>
-                        <br>
-                        <div>
-                            <label>Adja meg az időpontot a szállításra:</label>
-                            <input type="date" id="date" name="szállítás">
-                        </div>
-                        <br>
-                        <div>
-                            <label>Válassza ki az eszköz színét</label>
-                            <input type="color" id="color" name="szín">
-                        </div>
-                        <br>
-                        <div>
-                            <label>Adja meg a darabszámot:</label>
-                            <input type="range" id="range" name="darab" min="0" max="10">
-                        </div>
-                        <br>
-                        <div>
-                            <input type="submit" value="Rendelés leadása">
-                        </div>
-                    </form>
-                </article>
-            </main>
+                            </div>
+                            <br>
+                            <div>
+                                <label>Adja meg az időpontot a szállításra:</label>
+                                <input type="date" id="date" name="szállítás">
+                            </div>
+                            <br>
+                            <div>
+                                <label>Válassza ki az eszköz színét</label>
+                                <input type="color" id="color" name="szín">
+                            </div>
+                            <br>
+                            <div>
+                                <label>Adja meg a darabszámot:</label>
+                                <input type="range" id="range" name="darab" min="0" max="10">
+                            </div>
+                            <br>
+                            <div>
+                                <label for="email">Adja meg az email címet:</label>
+                                <input type="text" name="email" id="email">
+                            </div>
+                            <div>
+                                <label for="password">Jelszó </label>
+                                <input type="password" name="password" id="password">
+                            </div>
+                            <div>
+                                <input type="submit" value="Rendelés leadása">
+                            </div>
+                        </form>
+                    </article>
+                </main>
             </div>
             <div class="side right-side">
                 <img src="kepek/36030.gif">
             </div>
         </div>
-            <footer>
+        <footer>
 
-            </footer>
-        
-            
-        </div>
-        <script src="scripts.js"></script>
-    </body>
+        </footer>
+
+
+    </div>
+    <script src="scripts.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#validalas").validate({
+                rules: {
+                    Vezteknev: "required",
+                    Keresztnev: "required",
+                    csomag: "required",
+                    password: {
+                        required: true,
+                        minlength: 8
+                    },
+                    elfogad: {
+                        required: true,
+                    },
+                },
+
+                messages: {
+                    Vezteknev: " Írd be a vezetékneved!",
+                    Keresztnev: " Írd be a keresztneved!",
+                    password: {
+                        required: " Add meg a jelszavad!",
+                        minlength: " A jelszavad legalább 8 karakter hosszú legyen!"
+                    },
+                    email: " Kérlek valós email címet adj meg!",
+                    elfogad: " Kérlek fogadd el a feltételeinket!",
+                },
+
+            });
+        });
+
+
+    </script>
+
+
+</body>
+
 </html>
-
