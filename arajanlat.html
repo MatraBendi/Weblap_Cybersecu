@@ -107,17 +107,17 @@
                             </div>
                             <br>
                             <div>
-                                <label>Adja meg a darabszámot:</label>
-                                <input type="range" id="range" name="darab" min="0" max="10">
+                                <label for="darab">Adja meg a darabszámot:</label>
+                                <input type="number" id="darab" name="darab" min="0" max="10">
                             </div>
                             <br>
                             <div>
-                                <label for="email">Adja meg az email címet:</label>
+                                <label for="email">Adja meg az email címét:</label>
                                 <input type="email" name="email" id="email" placeholder="pelda@pelda.hu">
                             </div>
                             
                             <div>
-                                <label for="password">Adja meg az egyedi jelszót: </label>
+                                <label for="password">Adja meg a jelszavát: </label>
                                 <input type="password" name="password" id="password" placeholder="jelszo1234!">
                             </div>
                             <br>
@@ -174,25 +174,27 @@
                     },
                     velemeny:"required",
                     datum: "required",
-                    csomag: "required"
+                    csomag: "required",
+                    darab: "required"
                 },
 
                 messages: {
-                    Vezteknev: " Írd be a vezetékneved!",
-                    Keresztnev: " Írd be a keresztneved!",
+                    Vezteknev: " Írja be vezetéknevét!",
+                    Keresztnev: " Írja be a keresztnevét!",
                     password: {
-                        required: " Add meg a jelszavad!",
+                        required: " Adja meg a jelszavát!",
                         minlength: " A jelszavad legalább 8 karakter hosszú legyen!",
                         specialChar: "A jelszónak tartalmaznia kell legalább egy speciális karaktert."
                     },
                     email: {
-                        required: "Kérlek valós email címet adj meg!",
-                        email: "Kérlek, érvényes email címet adj meg!"
+                        required: "Kérlek valós email címet adjon meg!",
+                        email: "Kérlek, érvényes email címet adjon meg!"
                     },
                     elfogad: " Kérlek fogadd el a feltételeinket!",
                     velemeny: "Írd meg a véleményedet!",
                     datum: "Adja meg a szállítás dátumát!",
-                    csomag: "Válassza ki a támogatottság szintjét!"
+                    csomag: "Válassza ki a támogatottság szintjét!",
+                    darab:  "Adja meg a rendelés nagyságát (1-10)"
                 },
 
             });
