@@ -190,12 +190,13 @@ text-align: center;
     text-align: center;
 
 }
+
+
 label.error{
     color: red;
     display: block;
     flex-wrap: wrap ;
 }
-
 
 
 .galleria{
