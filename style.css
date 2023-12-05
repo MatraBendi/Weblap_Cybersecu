@@ -8,65 +8,68 @@ body {
 }
 
 .fejlec {
-    background-image: url('kepek/hatter.png'); 
+    background-image: url('kepek/hatter.png');
     background-size: cover;
     background-position: center;
     font-family: 'Roboto Slab', serif
 }
 
-header, nav{
-    color: white; 
-    backdrop-filter: blur(3px); 
+header,
+nav {
+    color: white;
+    backdrop-filter: blur(3px);
 }
 
 #etikus-kiberbunozes {
-    background-color: #e8f0fe; 
+    background-color: #e8f0fe;
     padding: 20px;
     margin: 10px 0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: justify; 
+    text-align: justify;
 }
 
 #nem-etikus-kiberbunozes {
     background-color: #ffecd1;
-    text-align: justify; 
+    text-align: justify;
     padding: 20px;
     margin: 10px 0;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-span{
-font-weight: bold;
+span {
+    font-weight: bold;
 
 }
 
-#jelszo{
+#jelszo {
     color: #f2f2f2;
 }
+
 header {
     padding: 10px;
     text-align: center;
-    position: relative; 
+    position: relative;
 }
 
 header h1 {
     font-weight: 500;
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px #000000; 
+    text-shadow: 2px 2px 4px #000000;
     margin: 0;
 }
 
-article h3{
+article h3 {
     text-align: center;
 
 }
 
-aside h3{
+aside h3 {
     text-align: center;
 
 }
+
 nav {
     padding: 0;
     position: relative;
@@ -83,30 +86,31 @@ nav ul {
 nav ul li {
     text-align: center;
     padding: 10px;
-    border-radius: 10px; 
-    transition: all 0.5s ease; 
-    box-sizing: border-box; 
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    text-shadow: 1px 1px 3px #000000; 
+    text-shadow: 1px 1px 3px #000000;
 }
 
 
 nav ul li:hover,
 nav ul li:focus-within {
-    transform: scale(1.05); 
-    font-size: 1.05em; 
+    transform: scale(1.05);
+    font-size: 1.05em;
 }
 
 nav ul li.active {
-    background-color: #4CAF50; 
+    background-color: #4CAF50;
 }
-#secretContent { 
-    display: none; 
+
+#secretContent {
+    display: none;
 }
 
 main {
@@ -115,7 +119,8 @@ main {
     flex: 1;
 }
 
-article, aside {
+article,
+aside {
     padding: 10px;
 }
 
@@ -135,14 +140,18 @@ footer {
     padding: 10px;
     background-color: #f2f2f2;
 }
+
 /* xss*/
 
-.main-layout{
+.main-layout {
     display: flex;
     flex-direction: row;
 }
-.main-layout .left-side, .main-layout .right-side {
-    flex: 1; /* Mindkét oldal 50%-os szélességű */
+
+.main-layout .left-side,
+.main-layout .right-side {
+    flex: 1;
+    /* Mindkét oldal 50%-os szélességű */
 }
 
 .main-layout {
@@ -158,18 +167,19 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Középre igazítja a tartalmat vízszintesen */
+    align-items: center;
+    /* Középre igazítja a tartalmat vízszintesen */
 }
 
-#loginSection{
-text-align: center;
+#loginSection {
+    text-align: center;
 }
 
 .dt-image {
-    width: 50%; /* Adjust the percentage as needed for the desired size */
-    height: auto; /* This maintains the aspect ratio of the image */
+    width: 50%;
+    height: auto;
     display: block;
-    margin: auto; /* This centers the image in the div */
+    margin: auto;
 }
 
 .content-container {
@@ -180,26 +190,25 @@ text-align: center;
 }
 
 .content-container img {
-    width: 200px;  /* Example width */
-    height: auto;  /* Maintain aspect ratio */
-    margin-bottom: 20px; /* Add some space between the image and the text */
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.arajanlat-kozep
-{
+.arajanlat-kozep {
     text-align: center;
 
 }
 
 
-label.error{
+label.error {
     color: red;
     display: block;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
 }
 
 
-.galleria{
+.galleria {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,17 +216,17 @@ label.error{
     margin: auto;
 }
 
-.galleria img{
+.galleria img {
     max-width: 50%;
     height: auto;
 
 }
 
-.galleria-theme-classic  {
+.galleria-theme-classic {
     background-color: wheat;
 }
 
-.galleria-theme-classic  img {
+.galleria-theme-classic img {
     background-color: wheat;
 }
 
@@ -239,14 +248,16 @@ label.error{
     aside {
         flex: 30%;
     }
+
     .dt-image {
-        width: 50%; 
+        width: 50%;
     }
+
     .content-container {
         flex-direction: row;
         justify-content: space-between;
     }
-    
+
 }
 
 /* Asztali nézet */
@@ -258,7 +269,8 @@ label.error{
     }
 
     .side {
-        flex: 1; /* 20% szélesség */
+        flex: 1;
+        /* 20% szélesség */
         overflow: hidden;
     }
 
@@ -267,12 +279,14 @@ label.error{
         width: auto;
         object-fit: cover;
     }
+
     .center-content {
-        flex: 3; /* 60% szélesség */
+        flex: 3;
+        /* 60% szélesség */
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; /* Középre igazítja a tartalmat vízszintesen */
+        align-items: center;
     }
 
 }
