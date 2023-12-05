@@ -75,19 +75,18 @@
                             <div>
                                 <label for="csomag">Adja meg a támogatottság szintjét:</label>
                                 <br>
-                                <input type="radio" id="radio1" name="csomag" value="Basic">
+                                <input type="radio" id="csomag" name="csomag" value="Basic">
                                 <label for="radio1">Basic</label>
-                                <input type="radio" id="radio2" name="csomag" value="Advanced">
+                                <input type="radio" id="csomag" name="csomag" value="Advanced">
                                 <label for="radio2">Advanced</label>
-                                <input type="radio" id="radio3" name="csomag" value="Expert">
+                                <input type="radio" id="csomag" name="csomag" value="Expert">
                                 <label for="radio3">Expert</label>
-
                             </div>
                             <br>
                             <div>
                                 <label>Extra igények:</label>
                                 <br>
-                                <input type="checkbox" id="checkbox1" name="oktatas" value="oktatas">
+                                <input type="checkbox" id="checkbox1" name="oktatas" value="oktatas" checked>
                                 <label for="checkbox1">Oktatás</label>
                                 <input type="checkbox" id="checkbox2" name="implementaio" value="implementaio">
                                 <label for="checkbox2">Implementáció </label>
@@ -97,8 +96,8 @@
                             </div>
                             <br>
                             <div>
-                                <label>Adja meg az időpontot a szállításra:</label>
-                                <input type="date" id="date" name="szállítás">
+                                <label for="datum">Adja meg az időpontot a szállításra:</label>
+                                <input type="date" id="datum" name="datum">
                             </div>
                             <br>
                             <div>
@@ -113,16 +112,28 @@
                             <br>
                             <div>
                                 <label for="email">Adja meg az email címet:</label>
-                                <input type="text" name="email" id="email">
+                                <input type="email" name="email" id="email" placeholder="pelda@pelda.hu">
                             </div>
+                            
                             <div>
-                                <label for="password">Jelszó </label>
-                                <input type="password" name="password" id="password">
+                                <label for="password">Adja meg az egyedi jelszót: </label>
+                                <input type="password" name="password" id="password" placeholder="jelszo1234!">
+                            </div>
+                            <br>
+                            <label for="velemeny">Egyedi kérés:</label>
+                            <br>
+                            <textarea name="velemeny" id="velemeny" placeholder="Bármilyen egyedi kérést írjon le"></textarea>
+                            <div>
+                                <label for="elfogad">Általános szerzői feltételek </label>
+                                <input type="checkbox" name="elfogad" id="elfogad">
                             </div>
                             <div>
                                 <input type="submit" value="Rendelés leadása">
+                                <input value="Törlés" type="reset">
                             </div>
                         </form>
+                        <p>Ha nem biztos melyik eszköz megfelelő önnek, keresse szakértőinket az alábbi helyen.</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.7718057424336!2d19.094234376653482!3d47.47487609706401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dcde66f013f7%3A0x5dbbcd53ecbe7fb4!2sTelekom%20HQ%20-%20Workplace%20of%20Now!5e0!3m2!1sen!2shu!4v1701807918532!5m2!1sen!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </article>
                 </main>
             </div>
@@ -130,9 +141,6 @@
                 <img src="kepek/36030.gif" alt="gif binaris" title="gif binaris">
             </div>
         </div>
-        <footer>
-
-        </footer>
 
 
     </div>
@@ -141,18 +149,31 @@
     <script src="jquery-validation-1.19.5/dist/jquery.validate.js"></script>
     <script>
         $(document).ready(function () {
+
+            //Legyen benne specko karakter
+            $.validator.addMethod("specialChar", function (value, element) {
+                return this.optional(element) || /[!@#$%^&*(),.?":{}|<> ]/.test(value);
+            });
+
             $("#validalas").validate({
                 rules: {
                     Vezteknev: "required",
                     Keresztnev: "required",
-                    csomag: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
                     password: {
                         required: true,
-                        minlength: 8
+                        minlength: 8,
+                        specialChar: true
                     },
                     elfogad: {
                         required: true,
                     },
+                    velemeny:"required",
+                    datum: "required",
+                    csomag: "required"
                 },
 
                 messages: {
@@ -160,10 +181,17 @@
                     Keresztnev: " Írd be a keresztneved!",
                     password: {
                         required: " Add meg a jelszavad!",
-                        minlength: " A jelszavad legalább 8 karakter hosszú legyen!"
+                        minlength: " A jelszavad legalább 8 karakter hosszú legyen!",
+                        specialChar: "A jelszónak tartalmaznia kell legalább egy speciális karaktert."
                     },
-                    email: " Kérlek valós email címet adj meg!",
+                    email: {
+                        required: "Kérlek valós email címet adj meg!",
+                        email: "Kérlek, érvényes email címet adj meg!"
+                    },
                     elfogad: " Kérlek fogadd el a feltételeinket!",
+                    velemeny: "Írd meg a véleményedet!",
+                    datum: "Adja meg a szállítás dátumát!",
+                    csomag: "Válassza ki a támogatottság szintjét!"
                 },
 
             });
