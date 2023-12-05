@@ -2,7 +2,9 @@
 
 Készítő: Mátravölgyi Bendeúz Ákos
 
-Url: https://matrabendi.github.io/Weblap_Cybersecu/
+Weboldal: https://matrabendi.github.io/Weblap_Cybersecu/
+
+Github: https://github.com/MatraBendi/Weblap_Cybersecu
 
 Leírás: Az oldal egy rövid leírást ad a kiberbiztonságról, milyen két csoportba lehet osztani a hackereket. Ezen felül bemutatja a fontosságát a tűzfalaknak és mindennapi példákkal szemlélteti, az xss támadási formát és egy rövid játékkal teszteli a hallgatók tudását, ezen felül egy .
 
