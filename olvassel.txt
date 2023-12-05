@@ -3,6 +3,7 @@
 Készítő: Mátravölgyi Bendeúz Ákos
 
 Weboldal: https://matrabendi.github.io/Weblap_Cybersecu/
+(Lehet nem érzékeli biztonsságosnak az oldalt, -> speialis -> megynitás)
 
 Github: https://github.com/MatraBendi/Weblap_Cybersecu
 
