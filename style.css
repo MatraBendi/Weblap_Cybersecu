@@ -210,14 +210,22 @@ label#csomag-error.error{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90vw;
+    width: 40vw;
     margin: auto;
 }
 
 .galleria img{
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
 
+}
+
+.galleria-theme-classic  {
+    background-color: wheat;
+}
+
+.galleria-theme-classic  img {
+    background-color: wheat;
 }
 
 /* Tablet nézet */
