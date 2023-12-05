@@ -13,7 +13,7 @@
 
 </head>
     <body>
-        <script src="scripts.js"></script>
+        
         <div id="loginSection">
             <h1>Árajánlat kérése</h1>
             <p>Ez a tartalom csak a helyes jelszó beírása után jelenik meg.</p>
@@ -49,13 +49,13 @@
                     <form id="validalas" method="post" action="http://szamtud.uni-corvinus.hu/receive.php">
                         <div>
                             <label>Vezetéknév:</label>
-                            <input type="text" id="vezeteknev" name="textbox" placeholder="Gipsz">
+                            <input type="text" id="vezeteknev" name="Vezteknev" placeholder="Gipsz">
                             <label>Keresztnév:</label>
-                            <input type="text" id="keresztnev" name="textbox" placeholder="Jakab">
+                            <input type="text" id="keresztnev" name="Keresztnev" placeholder="Jakab">
                             <hr>
-                            <label for="region">Válassza ki a terméket:</label>
+                            <label for="termek">Válassza ki a terméket:</label>
                             <br>
-                                <select id="region" name="region">
+                                <select id="termek" name="Termék">
                                     <option value="100F">FortiGate 100F</option>
                                     <option value="WAF">FortiWeb 100F</option>
                                     <option value="Manager">FortiManager-VM-10-UG</option>
@@ -68,11 +68,11 @@
                         <div>
                             <label>Adja meg a támogatottság szintjét:</label>
                             <br>
-                            <input type="radio" id="radio1" name="radio" value="Option 1">
+                            <input type="radio" id="radio1" name="csomag" value="Basic">
                             <label for="radio1">Basic</label>
-                            <input type="radio" id="radio2" name="radio" value="Option 2">
+                            <input type="radio" id="radio2" name="csomag" value="Advanced">
                             <label for="radio2">Advanced</label>
-                            <input type="radio" id="radio3" name="radio" value="Option 3">
+                            <input type="radio" id="radio3" name="csomag" value="Expert">
                             <label for="radio3">Expert</label>
 
                         </div>
@@ -80,28 +80,28 @@
                         <div>
                             <label>Extra igények:</label>
                             <br>
-                            <input type="checkbox" id="checkbox1" name="checkbox" value="Checkbox 1">
+                            <input type="checkbox" id="checkbox1" name="oktatas" value="oktatas">
                             <label for="checkbox1">Oktatás</label>
-                            <input type="checkbox" id="checkbox2" name="checkbox" value="Checkbox 2">
+                            <input type="checkbox" id="checkbox2" name="implementaio" value="implementaio">
                             <label for="checkbox2">Implementáció </label>
-                            <input type="checkbox" id="checkbox3" name="checkbox" value="Checkbox 3">
+                            <input type="checkbox" id="checkbox3" name="7x24" value="7x24">
                             <label for="checkbox3">7x24-es készenlét </label>
 
                         </div>
                         <br>
                         <div>
                             <label>Adja meg az időpontot a szállításra:</label>
-                            <input type="date" id="date" name="date">
+                            <input type="date" id="date" name="szállítás">
                         </div>
                         <br>
                         <div>
                             <label>Válassza ki az eszköz színét</label>
-                            <input type="color" id="color" name="color">
+                            <input type="color" id="color" name="szín">
                         </div>
                         <br>
                         <div>
                             <label>Adja meg a darabszámot:</label>
-                            <input type="range" id="range" name="range" min="0" max="10">
+                            <input type="range" id="range" name="darab" min="0" max="10">
                         </div>
                         <br>
                         <div>
@@ -121,6 +121,7 @@
         
             
         </div>
+        <script src="scripts.js"></script>
     </body>
 </html>
 
